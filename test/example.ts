@@ -1,7 +1,7 @@
 import express from 'express';
 import { Router } from 'express';
 
-import expressSwagger from '../lib';
+import { expressSwagger } from '../lib';
 
 const app: express.Application = express();
 const router: Router = Router();

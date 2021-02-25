@@ -1,6 +1,6 @@
 import fs from 'fs';
-import Handlebars from 'handlebars';
 import path from 'path';
+import Handlebars from 'handlebars';
 import readPkgUp from 'read-pkg-up';
 import { defaultsDeep } from 'lodash';
 import { Request, Response } from 'express';
@@ -45,7 +45,7 @@ const defaultOptions: expressSwaggerUiOptions = {
   favicon32: '/favicon-32x32.png',
 };
 
-function expressSwagger(config: Partial<expressSwaggerUiOptions> = {}) {
+export function expressSwagger(config: Partial<expressSwaggerUiOptions> = {}) {
   if (!config.swaggerVersion) {
     const pkg = readPkgUp.sync({ cwd: __dirname });
     if (!pkg) {
@@ -95,6 +95,5 @@ function expressSwagger(config: Partial<expressSwaggerUiOptions> = {}) {
     return next();
   };
 }
-
-export default expressSwagger;
-module.exports = expressSwagger;
+// export default expressSwagger;
+// module.exports = expressSwagger;

@@ -1,16 +1,13 @@
-# @lxsbw/express-swagger-ui [![NPM version][npm-image]][npm-url] [![CircleCI](https://circleci.com/gh/scttcper/@lxsbw/express-swagger-ui.svg?style=svg)](https://circleci.com/gh/scttcper/@lxsbw/express-swagger-ui)
+# @lxsbw/express-swagger-ui [![NPM version][npm-image]][npm-url]
 
 [npm-image]: https://img.shields.io/npm/v/@lxsbw/express-swagger-ui.svg
 [npm-url]: https://npmjs.org/package/@lxsbw/express-swagger-ui
-[travis-img]: https://api.travis-ci.org/scttcper/@lxsbw/express-swagger-ui.svg?branch=master
-[travis-url]: https://travis-ci.org/scttcper/@lxsbw/express-swagger-ui
-[coverage-img]: https://codecov.io/gh/scttcper/@lxsbw/express-swagger-ui/branch/master/graph/badge.svg
-[coverage-url]: https://codecov.io/gh/scttcper/@lxsbw/express-swagger-ui
 
-> Host swagger ui at a given directory from your koa v2 app
+> Host swagger ui at a given directory from your express app
 
 Inspired by:
 
+- [koa2-swagger-ui](https://github.com/scttcper/koa2-swagger-ui)
 - [swagger-injector](https://github.com/johnhof/swagger-injector) for serving on a specific route
 - [hapi-swaggered-ui](https://github.com/z0mt3c/hapi-swaggered-ui) for serving files from node_modules using a handlebars driven index.html
 
@@ -48,7 +45,7 @@ favicon32: '/favicon-32x32.png', // default icon 32x32, set for self icon
 
 ```javascript
 import * as express from 'express';
-const expressSwagger = require('@lxsbw/express-swagger-ui');
+import { expressSwagger } from '@lxsbw/express-swagger-ui';
 
 const app = express();
 
