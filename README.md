@@ -60,3 +60,7 @@ app.use(
 
 app.listen(3000);
 ```
+
+## Remarks
+
+提供给express-joi-swagger-ts使用，修改了模块导出方式
